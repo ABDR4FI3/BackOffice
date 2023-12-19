@@ -1,5 +1,6 @@
-package com.example.backoffice;
+package com.example.backoffice.Home;
 
+import com.example.backoffice.DbConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,16 +9,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SignIn extends Application {
+public class RenderHome extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SignIn.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(com.example.backoffice.HelloApplication.class.getResource("Home.fxml"));
         //Change The icon of the Application
         Scene scene = new Scene(fxmlLoader.load());
         Image icon = new Image("file:C:/Users/Elgue/OneDrive/Documents/JAVA PROJECT/BackOffice/src/main/resources/src/icon.png");
         stage.getIcons().add(icon);
-        stage.setTitle("Welcome To ABA43 Hotel!");
+        stage.setTitle("DashBoard");
         stage.setScene(scene);
         stage.show();
 

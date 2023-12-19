@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-class DbConnection {
+public class DbConnection {
     String url ;
     String user  ;
     String password ;
@@ -24,7 +24,7 @@ class DbConnection {
             // Open a connection
             connection = DriverManager.getConnection(url, user, password);
 
-            // Replace the existing code with a SELECT query
+            // Testing Query
             String selectQuery = "SELECT * FROM test";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(selectQuery);
@@ -42,10 +42,13 @@ class DbConnection {
             // Close resources
             resultSet.close();
             statement.close();
-            connection.close();
+            //connection.close();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
+    }
+    public Connection getConnection() {
+        return connection;
     }
 }
 

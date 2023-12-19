@@ -7,4 +7,6 @@ module com.example.backoffice {
 
     opens com.example.backoffice to javafx.fxml;
     exports com.example.backoffice;
+    exports com.example.backoffice.Home;
+
 }
